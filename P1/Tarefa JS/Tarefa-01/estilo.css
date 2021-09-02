@@ -6,9 +6,9 @@
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: -webkit-linear-gradient(180deg, #1E90FF 30%, #00BFFF 70%);
-    background: -o-linear-gradient(top, #1E90FF 70%, #00BFFF 50%);
-    background: -moz-linear-gradient(180deg, #1E90FF 70%, #00BFFF 50%);
-    background: linear-gradient(top, #1E90FF 70%, #00BFFF 50%);
+    background: -o-linear-gradient(top, #1E90FF 30%, #00BFFF 70%);
+    background: -moz-linear-gradient(180deg, #1E90FF 30%, #00BFFF 70%);
+    background: linear-gradient(top, #1E90FF 30%, #00BFFF 70%);
 }
 
 .conteiner{
