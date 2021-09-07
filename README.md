@@ -1,2 +1,2 @@
 # Prog-Orientada-Objetos-Aplicada
- Displina de Programação Orientada a Objetos Aplicada
+ Disciplina de Programação Orientada a Objetos Aplicada
