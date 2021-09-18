@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <title>Tarefa Vue SPA</title>
+</head>
+<body>
+    <div id="app">
+        <div id="form">
+            <label >Carro:
+                <input type="text" v-model="carro"/>
+            </label>
+            <label>Cor:
+                <input type="text" v-model="cor"/>
+            </label>
+            <label>Ano:
+                <input type="number" v-model="ano"/>
+            </label>
+            <button @click="listarCarros()">Listar Carro</button>
+        </div>
+        <div id="listaCarros">
+            <ul v-for="c in carros">
+                <li>{{c.carro}}</li>
+                <li>{{c.cor}}</li>
+                <li>{{c.ano}}</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            carro: 'Corola',
+            cor: 'Prata',
+            ano: null,
+            carros:[{}]
+        },
+        methods: {
+            listarCarros(){
+                this.carros.push({carro: this.carro, cor: this.cor, ano: this.ano})
+            }
+        }
+    })
+</script>
+</html>

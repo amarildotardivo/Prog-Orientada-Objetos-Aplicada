@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemplo Vue</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    
+</head>
+
+<body>
+  <div id="app">
+    <div class="cart">
+      <button type="button" class="btn btn-primary"><span class="fa fa-car">{{carrinho}}</span>  </button> 
+    </div>
+    <!-- <produto id='1' nome='Meia Azul' imagem='assets/vmSocks-blue.png' estoque='10' preco='1.23' cor='blue'></produto> -->
+    <produto v-for="(produto,index) in produtos" :id=produto.id :nome=produto.nome :imagem=produto.imagem :estoque=produto.estoque :preco=produto.preco :cor=produto.cor></produto>
+  </div> 
+     
+</body>
+<script>
+Vue.component('produto', {
+  props: ['id','nome','imagem','estoque','preco','cor'],
+  data: function () {
+    return {		
+	  }
+  },
+  template: 
+	'<div>'+
+	'  <div class="product">'+
+  '    <div class="product-image">'+
+  '      <img :src="imagem" />'+
+  '    </div>'+
+  '    <div class="product-info">'+
+  '      <h1>{{ nome }}</h1>'+
+  '      <p v-if="estoque"> In Stock</p>'+
+  '     <p v-else> Out of Stock</p> '+
+  '      <button @click="adicionaCarrinho(id)" > '+
+  '        <div  class="color-box">Comprar</div>      '+
+  '      </button> '+
+  '    </div> '+
+  '  </div>  '+
+	'  </div>  '
+})
+var app = new Vue({
+  el: '#app',
+  data() {
+    return {
+      produtos:[
+        {id: 1, nome: 'Meia azul', imagem: 'assets/vmSocks-blue.png', estoque: 10, preco: 13.30,cor: "blue" },
+        {id: 2, nome: 'Meia verde', imagem: 'assets/vmSocks-green.png', estoque: 4, preco: 23.00, cor:"green" },
+      ],
+      carrinho: [],
+      current: 0,
+    }
+  },
+  methods: {
+      adicionaCarrinho(id) {
+        this.carrinho.push(id)
+      }
+  }
+})
+</script>
+
+</html>
+<!-- 
+          
+-->
+
