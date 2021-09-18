@@ -5,30 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Tarefa Vue SPA</title>
+
     <link rel="stylesheet" href="estilo.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
-    <title>Tarefa Vue SPA</title>
 </head>
 <body>
     <div id="app">
         <div id="form">
-            <label >Carro:
+            <h1>Lista de Carros</h1>
+            <label > <span>Carro:</span>
                 <input type="text" v-model="carro"/>
             </label>
-            <label>Cor:
+            <br />
+            <label><span>Cor:</span>
                 <input type="text" v-model="cor"/>
             </label>
-            <label>Ano:
+            <br />
+            <label><span>Ano:</span>
                 <input type="number" v-model="ano"/>
             </label>
-            <button @click="listarCarros()">Listar Carro</button>
+            <br />
+
+            <button @click="listarCarros()">Adicionar Carro</button>
         </div>
         <div id="listaCarros">
             <ul v-for="c in carros">
-                <li>{{c.carro}}</li>
-                <li>{{c.cor}}</li>
-                <li>{{c.ano}}</li>
+                <li><strong> Nome: </strong>{{c.carro}}</li>
+                <li><strong> Cor: </strong>{{c.cor}}</li>
+                <li><strong> Ano: </strong>{{c.ano}}</li>
             </ul>
 
         </div>
@@ -38,10 +44,10 @@
     var app = new Vue({
         el: '#app',
         data: {
-            carro: 'Corola',
-            cor: 'Prata',
+            carro: '',
+            cor: '',
             ano: null,
-            carros:[{}]
+            carros:[]
         },
         methods: {
             listarCarros(){
