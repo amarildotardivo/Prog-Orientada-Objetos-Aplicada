@@ -57,6 +57,10 @@ header p{
     width: 90%;
 }
 
+#form label{
+    font-weight: 700;
+}
+
 #listaCarros{
     margin: 20px;
 }

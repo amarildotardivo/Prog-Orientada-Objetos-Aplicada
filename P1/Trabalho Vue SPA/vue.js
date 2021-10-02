@@ -2,15 +2,15 @@ Vue.component('formulario', {
     template:
     `
     <div id="form">
-        <label > <span>Carro:</span>
+        <label>Carro:
             <input type="text" v-model="carro" />
         </label>
         <br />
-        <label><span>Cor:</span>
+        <label>Cor:
             <input type="text" v-model="cor" />
         </label>
         <br />
-        <label><span>Ano:</span>
+        <label>Ano:
             <input type="number" v-model="ano" />
         </label>
         <br />
