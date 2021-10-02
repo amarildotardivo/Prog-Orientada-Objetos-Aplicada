@@ -8,52 +8,29 @@
     <title>Tarefa Vue SPA</title>
 
     <link rel="stylesheet" href="estilo.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
 </head>
 <body>
     <div id="app">
-        <div id="form">
-            <h1>Lista de Carros</h1>
-            <label > <span>Carro:</span>
-                <input type="text" v-model="carro"/>
-            </label>
-            <br />
-            <label><span>Cor:</span>
-                <input type="text" v-model="cor"/>
-            </label>
-            <br />
-            <label><span>Ano:</span>
-                <input type="number" v-model="ano"/>
-            </label>
-            <br />
-
-            <button @click="listarCarros()">Adicionar Carro</button>
-        </div>
+        <header>
+            <h1>Trabalho Vue JS</h1>
+            <h2>Lista de Carros</h2>
+            <p>por: Amarildo Jorge de Jesus Junior</p>
+        </header>
+        
+        <formulario :modelo="carro" :cor="cor" :ano="ano" @carros="listarCarros"></formulario>
+        
         <div id="listaCarros">
             <ul v-for="c in carros">
                 <li><strong> Nome: </strong>{{c.carro}}</li>
                 <li><strong> Cor: </strong>{{c.cor}}</li>
                 <li><strong> Ano: </strong>{{c.ano}}</li>
             </ul>
-
         </div>
+
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"></script>
 </body>
-<script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            carro: '',
-            cor: '',
-            ano: null,
-            carros:[]
-        },
-        methods: {
-            listarCarros(){
-                this.carros.push({carro: this.carro, cor: this.cor, ano: this.ano})
-            }
-        }
-    })
-</script>
+
 </html>

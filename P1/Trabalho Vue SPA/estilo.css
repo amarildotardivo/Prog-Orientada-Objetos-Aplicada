@@ -27,9 +27,17 @@ body{
     margin: 5px;
 }
 
-body h1{
-    font-size: 1.8em;
+header{
     text-align:center;
+}
+
+header h1{
+    font-size: 1.8em;
+}
+
+header p{
+    text-align:right;
+    padding-top: 20px;
 }
 
 #form label span{
