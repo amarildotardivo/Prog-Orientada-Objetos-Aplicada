@@ -120,7 +120,7 @@ export default {
         //alteracao
         axios
           .put(
-            "http://localhost:3000/horarios/" + this.editedIndex,
+            "http://localhost:3000/horarios/" + this.editedItem.id,
             this.editedItem
           )
           .then((response) => {
