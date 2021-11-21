@@ -1,7 +1,7 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="users"
+    :items="horarios"
     sort-by="calories"
     class="elevation-1"
   >
@@ -12,7 +12,7 @@
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="900px">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="primary" dark class="mb-2" v-bind="attrs" v-on="on">
+            <v-btn color="primary" outlined class="mb-2" v-bind="attrs" v-on="on">
               Novo Horário
             </v-btn>
           </template>
@@ -74,7 +74,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "UserCrud",
+  name: "BusaoCrud",
   data: () => ({
     dialog: false,
     headers: [
@@ -84,7 +84,7 @@ export default {
       { text: "Horário", value: "horario" },
       { text: "Ações", value: "actions", sortable: false },
     ],
-    users: [{ id: 1, origem: "Itaperuna", destino: "Rio de Janeiro", horario: "12:25"}],
+    horarios: [{ id: 1, origem: "Itaperuna", destino: "Rio de Janeiro", horario: "12:25"}],
     editedIndex: -1,
     editedItem: {
       id: "",
@@ -102,9 +102,9 @@ export default {
   }),
   methods: {
     inicializa() {
-      axios("http://localhost:3000/users")
+      axios("http://localhost:3000/horarios")
         .then((response) => {
-          this.users = response.data;
+          this.horarios = response.data;
         })
         .catch((error) => console.log(error));
     },
@@ -120,40 +120,40 @@ export default {
         //alteracao
         axios
           .put(
-            "http://localhost:3000/users/" + this.editedIndex,
+            "http://localhost:3000/horarios/" + this.editedIndex,
             this.editedItem
           )
           .then((response) => {
             console.log(response);
-            Object.assign(this.users[this.editedIndex], this.editedItem);
+            Object.assign(this.horarios[this.editedIndex], this.editedItem);
             this.close();
           })
           .catch((error) => console.log(error));
       } else {
         //Inclusao
         axios
-          .post("http://localhost:3000/users", this.editedItem)
+          .post("http://localhost:3000/horarios", this.editedItem)
           .then((response) => {
             console.log(response);
-            this.users.push(this.editedItem);
+            this.horarios.push(this.editedItem);
             this.close();
           })
           .catch((error) => console.log(error));
       }
     },
     editItem(item) {
-      this.editedIndex = this.users.indexOf(item);
+      this.editedIndex = this.horarios.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
     },
     deleteItem(item) {
-      const index = this.users.indexOf(item);
-      confirm("Deseja apagar este item?") &&
+      const index = this.horarios.indexOf(item);
+      confirm("Deseja apagar este horário?") && 
         axios
-          .delete("http://localhost:3000/users/" + item.id)
+          .delete("http://localhost:3000/horarios/" + item.id)
           .then((response) => {
             console.log(response.data);
-            this.users.splice(index, 1);
+            this.horarios.splice(index, 1);
           })
           .catch((error) => console.log(error));
     },
