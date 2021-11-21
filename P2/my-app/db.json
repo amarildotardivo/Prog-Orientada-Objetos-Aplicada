@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "origem": "Itaperuna",
+      "destino": "Campos",
+      "horario": "8:00"
+    },
+    {
+      "id": "2",
+      "origem": "Itap",
+      "destino": "Camp",
+      "horario": "7:00"
+    }
+  ]
+}
