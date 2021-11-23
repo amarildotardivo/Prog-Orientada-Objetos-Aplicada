@@ -4,43 +4,64 @@
       "id": "1",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "6:00"
+      "horario": "06:00",
+      "opcao_id": "1"
     },
     {
       "id": "2",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "7:00"
+      "horario": "07:00",
+      "opcao_id": "2"
     },
     {
       "id": "3",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "8:00"
+      "horario": "08:00",
+      "opcao_id": "1"
     },
     {
       "id": "4",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "9:00"
+      "horario": "09:00",
+      "opcao_id": "2"
     },
     {
       "id": "5",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "10:00"
+      "horario": "10:00",
+      "opcao_id": "1"
     },
     {
       "id": "6",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "11:00"
+      "horario": "05:54",
+      "opcao_id": "2"
     },
     {
       "id": "7",
-      "origem": "Itaperuna",
-      "destino": "Campos",
-      "horario": "12:00"
+      "origem": "Italva",
+      "destino": "Rio de Janeiro",
+      "horario": "00:40",
+      "opcao_id": "3"
+    }
+  ],
+  "opcao": [
+    {
+      "id": "1",
+      "op": "PARADOR"
+    },
+    {
+      "id": "2",
+      "op": "DIRETO"
+    },
+    {
+      "id": "3",
+      "op": "OASIS"
     }
   ]
 }

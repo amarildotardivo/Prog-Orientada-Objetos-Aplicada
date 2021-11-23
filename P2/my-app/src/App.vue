@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/horarios">Horário Busão</router-link>
+      <router-link to="/horarios">Horário Busão</router-link> | 
+      <router-link to="/opcao">Opção</router-link>
     </div>
     <div data-app>
        <router-view />
