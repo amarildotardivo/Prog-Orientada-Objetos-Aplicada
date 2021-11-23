@@ -46,8 +46,15 @@
       "id": "7",
       "origem": "Italva",
       "destino": "Rio de Janeiro",
-      "horario": "00:40",
+      "horario": "02:40",
       "opcao_id": "3"
+    },
+    {
+      "id": "8",
+      "origem": "Bom Jesus",
+      "destino": "Boa Ventura",
+      "horario": "05:46",
+      "opcao_id": "1"
     }
   ],
   "opcao": [

@@ -55,12 +55,15 @@
                         return-value
                         ></v-select>
                   </v-col>
+
                   <v-col cols="12" sm="2" md="2">
+										<label for="hora">Horário</label>
 										<input 
 											style="padding: 5px;"
 											type="time" 
 											v-model="editedItem.horario"
-											label="Horário"/>
+											label="Horário"
+											name="hora" />
                   </v-col>
 
                 </v-row>
