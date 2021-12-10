@@ -4,7 +4,7 @@
       "id": "1",
       "origem": "Itaperuna",
       "destino": "Campos",
-      "horario": "06:00",
+      "horario": "09:03",
       "opcao_id": "1"
     },
     {
@@ -41,13 +41,6 @@
       "destino": "Campos",
       "horario": "05:54",
       "opcao_id": "2"
-    },
-    {
-      "id": "7",
-      "origem": "Italva",
-      "destino": "Rio de Janeiro",
-      "horario": "02:40",
-      "opcao_id": "3"
     },
     {
       "id": "8",
